@@ -1,0 +1,7 @@
+#ignore folder
+.idea/
+
+#ignore file
+*.iml
+
+rebel.xml
