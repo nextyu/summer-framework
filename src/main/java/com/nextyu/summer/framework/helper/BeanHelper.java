@@ -1,6 +1,8 @@
 package com.nextyu.summer.framework.helper;
 
 import com.nextyu.summer.framework.util.ReflectionUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,9 +17,14 @@ import java.util.Set;
  * @author nextyu
  */
 public class BeanHelper {
+
+    private static Logger logger = LoggerFactory.getLogger(BeanHelper.class);
+
+
     private static final Map<Class<?>, Object> BEAN_MAP = new HashMap<Class<?>, Object>();
 
     static {
+        logger.debug("init bean helper");
         Set<Class<?>> beanClassSet = ClassHelper.getBeanClasses();
         for (Class<?> beanClass : beanClassSet) {
             Object obj = ReflectionUtil.newInstance(beanClass);

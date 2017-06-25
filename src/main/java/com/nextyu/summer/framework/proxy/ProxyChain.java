@@ -13,14 +13,15 @@ import java.util.List;
  * @author nextyu
  */
 public class ProxyChain {
-    private final Class<?> targetClass;
-    private final Object targetObject;
-    private final Method targetMethod;
-    private final MethodProxy methodProxy;
-    private final Object[] methodParams;
 
-    private List<Proxy> proxyList = new ArrayList<Proxy>();
-    private int proxyIndex = 0;
+    private final Class<?> targetClass; // 目标类
+    private final Object targetObject; // 目标对象
+    private final Method targetMethod; // 目标方法
+    private final MethodProxy methodProxy; // 方法代理
+    private final Object[] methodParams; // 方法参数
+
+    private List<Proxy> proxyList = new ArrayList<>(); // 代理列表
+    private int proxyIndex = 0; // 代理索引
 
     public ProxyChain(Class<?> targetClass, Object targetObject, Method targetMethod, MethodProxy methodProxy
             , Object[] methodParams, List<Proxy> proxyList) {

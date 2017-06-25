@@ -1,9 +1,6 @@
 package com.nextyu.summer.framework;
 
-import com.nextyu.summer.framework.helper.BeanHelper;
-import com.nextyu.summer.framework.helper.ClassHelper;
-import com.nextyu.summer.framework.helper.ControllerHelper;
-import com.nextyu.summer.framework.helper.IocHelper;
+import com.nextyu.summer.framework.helper.*;
 import com.nextyu.summer.framework.util.ClassUtil;
 
 /**
@@ -17,6 +14,7 @@ public class HelperLoader {
         Class<?>[] classes = {
                 ClassHelper.class
                 , BeanHelper.class
+                , AopHelper.class
                 , IocHelper.class
                 , ControllerHelper.class};
         for (Class<?> aClass : classes) {

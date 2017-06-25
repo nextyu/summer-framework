@@ -15,6 +15,14 @@ import java.util.List;
  */
 public class ProxyManager {
 
+    /**
+     * 创建代理对象
+     *
+     * @param targetClass
+     * @param proxies
+     * @param <T>
+     * @return
+     */
     @SuppressWarnings("unchecked")
     public static <T> T createProxy(final Class<?> targetClass, final List<Proxy> proxies) {
         return (T) Enhancer.create(targetClass, new MethodInterceptor() {

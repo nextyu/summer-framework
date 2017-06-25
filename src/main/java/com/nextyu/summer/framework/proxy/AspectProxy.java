@@ -7,11 +7,12 @@ import java.lang.reflect.Method;
 
 /**
  * 切面代理
+ * 提供了一系列的"钩子方法"，由子类去实现
  * created on 2017-06-23 17:14
  *
  * @author nextyu
  */
-public class AspectProxy implements Proxy {
+public abstract class AspectProxy implements Proxy {
 
     private static Logger logger = LoggerFactory.getLogger(AspectProxy.class);
 

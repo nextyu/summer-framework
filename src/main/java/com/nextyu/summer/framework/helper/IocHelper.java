@@ -4,6 +4,8 @@ import com.nextyu.summer.framework.annotation.Autowired;
 import com.nextyu.summer.framework.util.ReflectionUtil;
 import org.apache.commons.collections.MapUtils;
 import org.apache.commons.lang3.ArrayUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.Field;
 import java.util.Map;
@@ -15,7 +17,10 @@ import java.util.Map;
  * @author nextyu
  */
 public class IocHelper {
+    private static Logger logger = LoggerFactory.getLogger(IocHelper.class);
+
     static {
+        logger.debug("init ioc helper");
         Map<Class<?>, Object> beanMap = BeanHelper.getBeanMap();
         if (MapUtils.isNotEmpty(beanMap)) {
             for (Map.Entry<Class<?>, Object> beanEntry : beanMap.entrySet()) {

@@ -6,14 +6,12 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * created on 2017-06-23 15:38
+ * 事务注解
+ * 2017-06-25 下午3:51
  *
  * @author nextyu
  */
-@Target(ElementType.TYPE)
+@Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-@Controller
-@ResponseBody
-public @interface RestController {
-    String value() default "";
+public @interface Transaction {
 }

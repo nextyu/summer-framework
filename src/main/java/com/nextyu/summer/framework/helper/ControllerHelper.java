@@ -6,6 +6,8 @@ import com.nextyu.summer.framework.bean.Handler;
 import com.nextyu.summer.framework.bean.Request;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.ArrayUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.Method;
 import java.util.HashMap;
@@ -19,9 +21,12 @@ import java.util.Set;
  * @author nextyu
  */
 public class ControllerHelper {
+    private static Logger logger = LoggerFactory.getLogger(ControllerHelper.class);
+
     private static final Map<Request, Handler> ACTION_MAP = new HashMap<Request, Handler>();
 
     static {
+        logger.debug("init controller helper");
         Set<Class<?>> controllerClasses = ClassHelper.getControllerClasses();
         if (CollectionUtils.isNotEmpty(controllerClasses)) {
             for (Class<?> controllerClass : controllerClasses) {
