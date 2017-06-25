@@ -16,7 +16,7 @@ import java.util.Set;
  *
  * @author nextyu
  */
-public class BeanHelper {
+public final class BeanHelper {
 
     private static Logger logger = LoggerFactory.getLogger(BeanHelper.class);
 

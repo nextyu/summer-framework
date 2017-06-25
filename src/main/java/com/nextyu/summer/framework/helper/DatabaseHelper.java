@@ -22,7 +22,7 @@ import java.util.*;
  *
  * @author nextyu
  */
-public class DatabaseHelper {
+public final class DatabaseHelper {
     private static final Logger logger = LoggerFactory.getLogger(DatabaseHelper.class);
 
     private static final ThreadLocal<Connection> CONNECTION_HOLDER;

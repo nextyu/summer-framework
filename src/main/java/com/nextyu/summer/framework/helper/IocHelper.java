@@ -16,7 +16,7 @@ import java.util.Map;
  *
  * @author nextyu
  */
-public class IocHelper {
+public final class IocHelper {
     private static Logger logger = LoggerFactory.getLogger(IocHelper.class);
 
     static {

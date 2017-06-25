@@ -20,7 +20,7 @@ import java.util.Set;
  *
  * @author nextyu
  */
-public class ControllerHelper {
+public final class ControllerHelper {
     private static Logger logger = LoggerFactory.getLogger(ControllerHelper.class);
 
     private static final Map<Request, Handler> ACTION_MAP = new HashMap<Request, Handler>();
